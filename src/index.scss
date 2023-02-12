@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "jetbrains";
+  src: url(./assets/Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(./assets/Fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "sinhala";
+  src: url(./assets/Fonts/Noto_Serif_Sinhala/NotoSerifSinhala-VariableFont_wdth\wght.ttf);
+}
+
+@font-face {
+  font-family: "nova";
+  src: url(./assets/Fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/Fonts/Outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(./assets/Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+:root {
+  --font-jetbrains: "jetbrains",monospace;
+  --font-nova: "nova", monospace;
+  --font-sinhala: "sinhala", serif;
+  --font-mont: "montserrat", sans-serif;
+  --font-outfit: "outfit", sans-serif;
+  --font-poppins: "poppins", sans-serif;
+}
+
+
+
+:root {
+  // ------ Colours ------
+  --primary-c: hsl(353, 100%, 65%);
+  --title-c: hsl(246, 24%, 26%);
+  --text-c: hsl(243, 16%, 43%);
+  --bg-c: hsl(260, 60%, 98%);
+  --container-c: hsl(0, 0%, 100%);
+
+  // ------ Typography ------
+  --font-jetbrains: "outfit", sans-serif;
+  --font-jetbrains: 'jetbrains-mono', monospace;
+  --font-nova: 'Nova-Mono', monospace;
+  --h1-fz: 2rem;
+  --h2-fz: 1.5rem;
+  --h3-fz: 1.25rem;
+  --normal-fz: 15px;
+  --sm-fz: 14px;
+  --sml-fz: 13px;
+  --md-fw: 500;
+  --semibl-fw: 600;
+  --bl-fw: 700;
+
+  // ------ box shadows ------
+  --bxsha: 0px 5px 20px 0px rgb(68 67 96 / 10%);
+
+  // ------ Border Radius ------
+  --bdrs-sm: 4px;
+  --bdrs-md: 8px;
+  --bdrs-lg: 20px;
+
+}
+
+// ------Responsive Typography ------
+@media screen and (max-width:1024px) {
+  :root {
+    --h1-fz: 1.75rem;
+    --h2-fz: 1.25rem;
+    --h3-fz: 1rem;
+    --normal-fz: 15px;
+    --sm-fz: 13px;
+    --sml-fz: 12px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.7;
+  color: var(--text-c);
+  background: var(--bg-c);
+}
+
+body,
+button,
+textarea,
+input {
+  font-family: var(--font-nova);
+  font-size: var(--normal-fz);
+}
+
+
+h1,
+h2,
+h3 {
+  color: var(--title-c);
+  font-weight: var(--semibl-fw);
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding-top: 7rem;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+}
+
+.sect__title {
+  font-size: var(--h1-fz);
+  margin-left: 15px;
+  font-weight: var(--semibl-fw);
+  position: relative;
+  margin-bottom: 3.75rem;
+  font-family: var(--font-nova);
+
+  &::before {
+    content: '';
+    background: url('./assets/img/dots-bg.svg');
+    width: 2.25rem;
+    height: 2.25rem;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+  }
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875em;
+  -webkit-border-radius: 1.875em;
+  -moz-border-radius: 1.875em;
+  -ms-border-radius: 1.875em;
+  -o-border-radius: 1.875em;
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-block;
+  background: var(--primary-c);
+  font-weight: var(--semibl-fw);
+
+  @keyframes button-push {
+
+    50% {
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+
+
+    }
+
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+
+  }
+
+  &:hover {
+    animation: button-push 0.4s;
+    -webkit-animation: button-push 0.4s;
+  }
+}

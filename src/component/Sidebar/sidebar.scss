@@ -1,0 +1,92 @@
+.aside {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    nav {
+        position: fixed;
+        left: 0;
+        top: 20%;
+        background: var(--bg-c);
+        border: 1px solid rgba(0, 0, 0, .5);
+        padding: 1rem;
+        max-width: 100px;
+        min-height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 0px 20px 20px 0;
+
+        .nav__menu {
+            .nav__list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                .nav__item {
+                    position: relative;
+
+                    .tooltip {
+                        position: absolute;
+                        background: var(--container-c);
+                        padding: 4px 10px;
+                        border: 1px solid var(--primary-c);
+                        border-radius: 4px;
+                        z-index: 4;
+                        top: 0;
+                        left: 70px;
+                        transition: all .2s ease;
+                        visibility:hidden;
+line-height: 1;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 5px;
+                            height: 5px;
+                            transform-origin: 50% 50%;
+                            transform: rotate(45deg) translateX(-50%);
+                            background: var(--container-c);
+                            right: 100%;
+                            top: 50%;
+                            margin-right: -5px;
+                            z-index: 400;
+                            border-bottom: 1px solid var(--primary-c);
+                            border-left: 1px solid var(--primary-c);
+
+                        }
+                    }
+
+                    &:hover {
+                        .tooltip {
+                            visibility: visible;
+                            left: 60px;
+                        }
+                    }
+
+                    .nav__link {
+                        font-size: 22px;
+                        color: var(--title-color);
+                        font-weight: var(--bl-fw);
+                        transition: .3s ease;
+                        -webkit-transition: .3s ease;
+                        -moz-transition: .3s ease;
+                        -ms-transition: .3s ease;
+                        -o-transition: .3s ease;
+
+
+
+                        &:hover {
+                            color: var(--primary-c);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
