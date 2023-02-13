@@ -5,8 +5,8 @@ import './hero.scss'
 import Me from '../../assets/img/rmu__logo.jpg'
 
 // component
-import Socials from './Socials'
-import Shapes from './Shapes'
+import Socials from '../Public/Socials'
+import Shapes from '../Public/Shapes'
 
 
 function Hero_sect() {

@@ -1,0 +1,109 @@
+.footer {
+
+    margin-top: 5rem;
+
+    .footer__grid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'a a a a b b  c c d d d d'
+            'e e e e e e e e e e e e ';
+        padding-top: 4rem;
+        border-top: 2px solid var(--primary-c);
+        border-right: 2px solid var(--primary-c);
+        border-radius: 0 6rem 0 0;
+        padding-bottom: 3rem;
+
+        .footer__title {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .footer__link {
+            color: var(--text-c);
+            transition: all .2s ease;
+            text-transform: capitalize;
+
+            &:hover {
+                letter-spacing: 1.5px;
+                color: var(--primary-c);
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .grid__child {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 1rem 2rem;
+
+        }
+
+        .company {
+            grid-area: a;
+
+            .discription {
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                max-width: 300px;
+
+            }
+
+
+            .logo__wrapper {
+                border-radius: 50%;
+                border: 3px solid var(--primary-c);
+                width: 100px;
+                padding: 2px;
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100px;
+                    border-radius: 50%;
+                }
+
+            }
+        }
+
+        .discover {
+            grid-area: b;
+        }
+
+        .about {
+            grid-area: c;
+        }
+
+        .contact {
+            grid-area: d;
+        }
+
+
+
+    }
+
+    .footer__bottom {
+        grid-area: e;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .rights {
+            display: flex;
+            min-width: 400px;
+            cursor: default;
+        }
+
+        .socials {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+}

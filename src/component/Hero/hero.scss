@@ -42,7 +42,7 @@
     }
 
     span {
-      font-family: var(--font-);
+      font-family: var(--font-poppins);
       font-size: var(--sm-fz);
     }
   }
@@ -194,6 +194,7 @@
   display: flex;
   column-gap: 1.5rem;
   margin: 1rem 0;
+  grid-area: f;
 
   .icon {
     transition: 0.3s;

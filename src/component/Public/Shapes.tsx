@@ -2,9 +2,9 @@ import React from 'react'
 
 function Shapes() {
   return (
-   <div className="shapes">
-    
-<svg
+    <div className="shapes">
+
+      <svg
         width="27"
         height="29"
         className="shape s1"
@@ -160,7 +160,7 @@ function Shapes() {
           fill-rule="evenodd"
         />
       </svg>
-   </div>
+    </div>
   )
 }
 

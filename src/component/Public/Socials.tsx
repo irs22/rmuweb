@@ -8,7 +8,7 @@ import { RxTwitterLogo} from 'react-icons/rx'
 
 function Socials() {
     return (
-        <div className="socials">
+        <div className="socials grid__child">
 
             <a href="" className="social__link" target="_blank"><FaFacebookSquare className="icon" /></a>
             <a href="" className="social__link" target="_blank"><RiDribbbleLine className="icon" /></a>

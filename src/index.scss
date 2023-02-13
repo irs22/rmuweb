@@ -22,13 +22,14 @@
   font-family: "outfit";
   src: url(./assets/Fonts/Outfit/Outfit-VariableFont_wght.ttf);
 }
+
 @font-face {
   font-family: "poppins";
   src: url(./assets/Fonts/Poppins/Poppins-Regular.ttf);
 }
 
 :root {
-  --font-jetbrains: "jetbrains",monospace;
+  --font-jetbrains: "jetbrains", monospace;
   --font-nova: "nova", monospace;
   --font-sinhala: "sinhala", serif;
   --font-mont: "montserrat", sans-serif;
@@ -102,7 +103,7 @@ body,
 button,
 textarea,
 input {
-  font-family: var(--font-nova);
+  font-family: var(--font-outfit);
   font-size: var(--normal-fz);
 }
 
@@ -119,7 +120,8 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+link {
   text-decoration: none;
 }
 
@@ -152,6 +154,8 @@ img {
   padding-bottom: 2rem;
 }
 
+
+// Secttion Title
 .sect__title {
   font-size: var(--h1-fz);
   margin-left: 15px;
@@ -171,6 +175,8 @@ img {
   }
 }
 
+
+// Buttons
 .btn {
   padding: 0.75rem 2rem;
   line-height: 1;
