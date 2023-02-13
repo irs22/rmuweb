@@ -219,3 +219,15 @@ img {
     -webkit-animation: button-push 0.4s;
   }
 }
+
+// Scroll bar
+
+::-webkit-scrollbar{
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--title-c);
+  border-radius: 8px;
+}
