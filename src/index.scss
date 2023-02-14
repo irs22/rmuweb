@@ -46,6 +46,12 @@
   --text-c: hsl(243, 16%, 43%);
   --bg-c: hsl(260, 60%, 98%);
   --container-c: hsl(0, 0%, 100%);
+  // Dark
+  // --primary-c: hsl(353, 100%, 65%);
+  // --title-c: hsl(0, 0%, 100%);
+  // --text-c: hsl(0, 0%, 100%);
+  // --bg-c: hsl(0, 0%, 12%);
+  // --container-c: hsl(0, 0%, 17%);
 
   // ------ Typography ------
   --font-jetbrains: "outfit", sans-serif;
@@ -154,6 +160,10 @@ img {
   padding-bottom: 2rem;
 }
 
+.main {
+  padding: 0 3rem;
+}
+
 
 // Secttion Title
 .sect__title {
@@ -191,6 +201,7 @@ img {
   display: inline-block;
   background: var(--primary-c);
   font-weight: var(--semibl-fw);
+  transition: all .2s ease;
 
   @keyframes button-push {
 
@@ -215,6 +226,7 @@ img {
   }
 
   &:hover {
+    color: var(--title-c);
     animation: button-push 0.4s;
     -webkit-animation: button-push 0.4s;
   }
@@ -222,12 +234,35 @@ img {
 
 // Scroll bar
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background: transparent;
-  width: 10px;
+  width: 16px;
+
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: var(--title-c);
-  border-radius: 8px;
+
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--title-c) var(--container-c);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--title-c);
+  border-radius: 4px;
+  border: 2px solid var(--container-c);
 }

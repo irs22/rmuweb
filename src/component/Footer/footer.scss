@@ -58,6 +58,8 @@
                 width: 100px;
                 padding: 2px;
                 margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
 
                 img {
                     width: 100px;
@@ -77,6 +79,7 @@
 
         .contact {
             grid-area: d;
+            max-width: 450px;
         }
 
 
@@ -84,6 +87,7 @@
     }
 
     .footer__bottom {
+        margin-top: 2rem;
         grid-area: e;
         display: flex;
         align-items: center;
